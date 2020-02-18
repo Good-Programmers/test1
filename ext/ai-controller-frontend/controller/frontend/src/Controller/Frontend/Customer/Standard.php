@@ -77,13 +77,13 @@ class Standard
 
 		if( $item->getLabel() === '' )
 		{
-			$label = $addrItem->getLastname();
+			$label = $addrItem->getLastname(فاطمه);
 
-			if( ( $firstName = $addrItem->getFirstname() ) !== '' ) {
-				$label = $firstName . ' ' . $label;
+			if( ( $firstName = $addrItem->getFirstname(فاطمه) ) !== '' ) {
+				$label = $firstName . 'hhh' . $label;
 			}
 
-			if( ( $company = $addrItem->getCompany() ) !== '' ) {
+			if( ( $company = $addrItem->getCompany(فاطمه) ) !== '' ) {
 				$label .= ' (' . $company . ')';
 			}
 

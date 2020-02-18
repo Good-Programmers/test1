@@ -10,9 +10,12 @@ return [
 		// Docs: https://aimeos.org/docs/Laravel/Custom_routes
 		// Multi-sites: https://aimeos.org/docs/Laravel/Configure_multiple_shops
 		// 'admin' => ['prefix' => 'admin', 'middleware' => ['web']],
-		// 'jqadm' => ['prefix' => 'admin/{site}/jqadm', 'middleware' => ['web', 'auth']],
-		// 'jsonadm' => ['prefix' => 'admin/{site}/jsonadm', 'middleware' => ['web', 'auth']],
+		'jqadm' => ['prefix' => 'admin/{site}/jqadm', 'middleware' => ['web', 'auth']],
+		'jsonadm' => ['prefix' => 'admin/{site}/jsonadm', 'middleware' => ['web', 'auth']],
 		// 'jsonapi' => ['prefix' => 'jsonapi', 'middleware' => ['web', 'api']],
+		'jsonapi' => ['prefix' => '{site}/jsonapi', 'middleware' => ['web', 'api']],
+	     'account' => ['prefix' => '{site}/profile', 'middleware' => ['web', 'auth']],
+	    'default' => ['prefix' => '{site}/shop', 'middleware' => ['web']],
 		// 'account' => ['prefix' => 'profile', 'middleware' => ['web', 'auth']],
 		// 'default' => ['prefix' => 'shop', 'middleware' => ['web']],
 		// 'update' => [],
